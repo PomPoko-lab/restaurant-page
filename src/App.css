@@ -1,0 +1,9 @@
+.App {
+  background-image: radial-gradient(rgba(19, 16, 16, 0.5), rgba(0, 0, 0, 0.6)),
+    radial-gradient(rgba(255, 159, 159, 0.2), rgba(102, 44, 44, 0.3)),
+    url(../public/img/DesktopBG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
