@@ -2,7 +2,7 @@ import { Container, Text } from '@chakra-ui/react';
 const Home = () => {
   return (
     <section>
-      <Container px='8' marginTop='50vh'>
+      <Container px='2' marginTop='3em'>
         <Text
           style={{ letterSpacing: '0.2em' }}
           lineHeight='2'

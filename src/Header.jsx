@@ -1,12 +1,17 @@
 import { Container, Box, Image } from '@chakra-ui/react';
 import { List, ListItem } from '@chakra-ui/react';
+import logo from './img/LOGO.png';
 
 const Header = () => {
   return (
     <header>
       <Container>
         <Box py={4}>
-          <List display='flex' justifyContent='space-between' marginBottom='8'>
+          <List
+            display='flex'
+            justifyContent='space-between'
+            marginBottom='10em'
+          >
             <ListItem
               color='whiteAlpha.900'
               fontWeight='100'
@@ -30,7 +35,7 @@ const Header = () => {
             </ListItem>
           </List>
           <Box>
-            <Image src='./img/LOGO.png' alt='LOGO' margin='auto' />
+            <Image src={logo} alt='LOGO' margin='auto' />
           </Box>
         </Box>
       </Container>
