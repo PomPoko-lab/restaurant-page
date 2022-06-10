@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/restaurant-page/static/css/main.6f57599c.css",
-    "main.js": "/restaurant-page/static/js/main.30da7691.js",
+    "main.css": "/restaurant-page/static/css/main.2a4d2120.css",
+    "main.js": "/restaurant-page/static/js/main.c078f6ee.js",
     "static/media/DesktopBG.jpg": "/restaurant-page/static/media/DesktopBG.78be4232e1931d02a639.jpg",
-    "static/media/LOGO.png": "/restaurant-page/static/media/LOGO.4c4e33a25d0affd7eec0.png",
+    "static/media/LOGO.png": "/restaurant-page/static/media/LOGO.1bc356aaaf269f2a593a.png",
+    "static/media/steamedbuns.jpg": "/restaurant-page/static/media/steamedbuns.9637775cc0cf4401ba09.jpg",
+    "static/media/5stars.png": "/restaurant-page/static/media/5stars.8322e64f1b9067c94acc.png",
+    "static/media/4stars.png": "/restaurant-page/static/media/4stars.70e0f9f1a371b377c204.png",
     "index.html": "/restaurant-page/index.html",
-    "main.6f57599c.css.map": "/restaurant-page/static/css/main.6f57599c.css.map",
-    "main.30da7691.js.map": "/restaurant-page/static/js/main.30da7691.js.map"
+    "main.2a4d2120.css.map": "/restaurant-page/static/css/main.2a4d2120.css.map",
+    "main.c078f6ee.js.map": "/restaurant-page/static/js/main.c078f6ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f57599c.css",
-    "static/js/main.30da7691.js"
+    "static/css/main.2a4d2120.css",
+    "static/js/main.c078f6ee.js"
   ]
 }
