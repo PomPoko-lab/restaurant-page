@@ -1,42 +1,70 @@
-import { Container, Box, Image } from '@chakra-ui/react';
-import { List, ListItem } from '@chakra-ui/react';
+import {
+  Container,
+  Box,
+  Image,
+  Link,
+  List,
+  ListItem,
+  Heading,
+} from '@chakra-ui/react';
 import logo from './img/LOGO.png';
 
-const Header = () => {
+const Header = ({ setViewState }) => {
   return (
-    <header>
-      <Container>
-        <Box py={4}>
-          <List
-            display='flex'
-            justifyContent='space-between'
-            marginBottom='10em'
+    <header style={{ marginBottom: '3em' }}>
+      <Container py={4}>
+        <List
+          display={'flex'}
+          justifyContent={'space-between'}
+          marginBottom={'5em'}
+        >
+          <ListItem
+            color={'gray.100'}
+            fontWeight={'100'}
+            letterSpacing={'wider'}
+            textTransform={'uppercase'}
           >
-            <ListItem
-              color='whiteAlpha.900'
-              fontWeight='100'
-              letterSpacing='wider'
+            <Link
+              style={{ textDecoration: 'none' }}
+              href='#'
+              onClick={() => setViewState('home')}
             >
-              HOME
-            </ListItem>
-            <ListItem
-              color='whiteAlpha.900'
-              fontWeight='100'
-              letterSpacing='wider'
+              Home
+            </Link>
+          </ListItem>
+          <ListItem
+            color={'gray.100'}
+            fontWeight={'100'}
+            letterSpacing={'wider'}
+            textTransform={'uppercase'}
+          >
+            <Link
+              style={{ textDecoration: 'none' }}
+              href='#'
+              onClick={() => setViewState('contact')}
             >
-              CONTACT US
-            </ListItem>
-            <ListItem
-              color='whiteAlpha.900'
-              fontWeight='100'
-              letterSpacing='wider'
+              Contact us
+            </Link>
+          </ListItem>
+          <ListItem
+            color={'gray.100'}
+            fontWeight={'100'}
+            letterSpacing={'wider'}
+            textTransform={'uppercase'}
+          >
+            <Link
+              style={{ textDecoration: 'none' }}
+              href='#'
+              onClick={() => setViewState('menu')}
             >
-              MENU
-            </ListItem>
-          </List>
-          <Box>
-            <Image src={logo} alt='LOGO' margin='auto' />
-          </Box>
+              Menu
+            </Link>
+          </ListItem>
+        </List>
+        <Box>
+          <Heading as={'h1'}>
+            <Image src={logo} alt={`BB's DreamLand logo`} margin={'auto'} />
+          </Heading>
         </Box>
       </Container>
     </header>
