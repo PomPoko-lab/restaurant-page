@@ -1,11 +1,4 @@
-import {
-  Box,
-  Container,
-  SlideFade,
-  slideFadeConfig,
-  useAriaHidden,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Box, Container, SlideFade, useDisclosure } from '@chakra-ui/react';
 import MenuItem from './MenuItem';
 import Arrows from './Arrows';
 import { useEffect, useState } from 'react';
