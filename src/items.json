@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "Basket of Steamed Buns",
+      "description": "Meat buns so fresh that they have yet to be removed from the steaming basket.",
+      "rating": "5",
+      "reviews": "36",
+      "imagePath": "/assets/steamedbuns.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Giant Beaver Burger Set",
+      "description": "No actual beavers were harmed in the making of this massive burger.",
+      "rating": "5",
+      "reviews": "52",
+      "imagePath": "/assets/burgerset.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Starlight Donuts",
+      "description": "Festive treats for those who prefer to express their Starlight spirit through eating until they lose consciousness.",
+      "rating": "4",
+      "reviews": "81",
+      "imagePath": "/assets/donuts.jpg"
+    }
+  ]
+}

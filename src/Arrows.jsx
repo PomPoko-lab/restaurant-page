@@ -1,7 +1,7 @@
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import { Container, Box, Link } from '@chakra-ui/react';
 
-const Arrows = () => {
+const Arrows = ({ toggleRight, toggleLeft }) => {
   return (
     <Container
       display={'flex'}
@@ -11,13 +11,23 @@ const Arrows = () => {
       p={0}
     >
       <Box bg={'whiteAlpha.300'} borderRadius={'3xl'}>
-        <Link>
-          <ChevronLeftIcon w={10} h={'auto'} color={'gray.50'} />
+        <Link as={'button'}>
+          <ChevronLeftIcon
+            w={10}
+            h={'auto'}
+            color={'gray.50'}
+            onClick={toggleLeft}
+          />
         </Link>
       </Box>
       <Box bg={'whiteAlpha.300'} borderRadius={'3xl'}>
-        <Link>
-          <ChevronRightIcon w={10} h={'auto'} color={'gray.50'} />
+        <Link as={'button'}>
+          <ChevronRightIcon
+            w={10}
+            h={'auto'}
+            color={'gray.50'}
+            onClick={toggleRight}
+          />
         </Link>
       </Box>
     </Container>
