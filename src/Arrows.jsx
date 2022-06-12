@@ -4,6 +4,7 @@ import { Container, Box, Link } from '@chakra-ui/react';
 const Arrows = ({ toggleRight, toggleLeft }) => {
   return (
     <Container
+      zIndex='1'
       display={'flex'}
       justifyContent={'space-between'}
       position={'absolute'}

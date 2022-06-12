@@ -5,13 +5,15 @@ import fourStars from './img/4stars.png';
 const MenuItem = ({ item }) => {
   return (
     <Box
+      flex='none'
       borderRadius={'sm'}
       shadow={'dark-lg'}
-      width={'100%'}
+      width={'full'}
       minHeight={'100%'}
       bg={'gray.50'}
       p={8}
-      pt={'38%'}
+      pt={'36%'}
+      pb='2em'
       position={'relative'}
     >
       <Box
@@ -37,7 +39,7 @@ const MenuItem = ({ item }) => {
       >
         {item.name}
       </Heading>
-      <Box display={'flex'} gap={'0.5em'} marginBottom={'5'}>
+      <Box display={'flex'} gap={'0.5em'} marginBottom={'4'}>
         <Text color={'gray.800'}>5.0</Text>
         <Box maxWidth={'5em'} my={'auto'}>
           <Image

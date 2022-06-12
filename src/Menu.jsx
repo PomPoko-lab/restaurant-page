@@ -1,29 +1,44 @@
-import { Container, SlideFade, Slide, useDisclosure } from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  SlideFade,
+  slideFadeConfig,
+  useAriaHidden,
+  useDisclosure,
+} from '@chakra-ui/react';
 import MenuItem from './MenuItem';
 import Arrows from './Arrows';
 import { useEffect, useState } from 'react';
 import data from './items.json';
 
-let currIndex = 1;
-
 const Menu = () => {
   const { isOpen, onToggle } = useDisclosure();
   const { items: importedItems } = data;
 
-  const [item, setItem] = useState(importedItems[currIndex]);
+  const [slide, setSlide] = useState(1);
 
   useEffect(() => {
     onToggle();
   }, []);
 
+  const carouselStyle = {
+    transition: 'all 0.5s',
+    ml: `-${slide * 100}%`,
+    display: 'flex',
+    height: '20em',
+    width: 'full',
+  };
+
   const toggleRight = () => {
-    currIndex === importedItems.length - 1 ? (currIndex = 0) : currIndex++;
-    setItem(importedItems[currIndex]);
+    setSlide((prevSlide) =>
+      prevSlide === importedItems.length - 1 ? 0 : prevSlide + 1
+    );
   };
 
   const toggleLeft = () => {
-    currIndex === 0 ? (currIndex = importedItems.length - 1) : currIndex--;
-    setItem(importedItems[currIndex]);
+    setSlide((prevSlide) =>
+      prevSlide === 0 ? importedItems.length - 1 : prevSlide - 1
+    );
   };
 
   return (
@@ -34,8 +49,13 @@ const Menu = () => {
     >
       <Container centerContent={true} px={'12'} position={'relative'}>
         <Arrows toggleRight={toggleRight} toggleLeft={toggleLeft} />
-
-        <MenuItem item={item} />
+        <Container p='0' paddingTop='5em' height='full' overflow='hidden'>
+          <Box {...carouselStyle}>
+            {importedItems.map((item, index) => (
+              <MenuItem key={`slide-${index}`} item={item} />
+            ))}
+          </Box>
+        </Container>
       </Container>
     </SlideFade>
   );
