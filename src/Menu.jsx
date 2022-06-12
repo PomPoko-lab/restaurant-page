@@ -15,7 +15,7 @@ const Menu = () => {
   }, []);
 
   const carouselStyle = {
-    transition: 'all 0.5s',
+    transition: 'all 0.5s ease-in-out',
     ml: `-${slide * 100}%`,
     display: 'flex',
     height: '20em',
