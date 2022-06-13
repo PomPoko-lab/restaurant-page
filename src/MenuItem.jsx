@@ -32,6 +32,7 @@ const MenuItem = ({ item }) => {
         />
       </Box>
       <Heading
+        as='h3'
         size={'md'}
         fontWeight={'extrabold'}
         marginBottom={'2'}
