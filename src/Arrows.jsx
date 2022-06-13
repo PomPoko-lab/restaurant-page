@@ -11,25 +11,25 @@ const Arrows = ({ toggleRight, toggleLeft }) => {
       top={'50%'}
       p={0}
     >
-      <Box bg={'whiteAlpha.300'} borderRadius={'3xl'}>
-        <Link as={'button'}>
-          <ChevronLeftIcon
-            w={10}
-            h={'auto'}
-            color={'gray.50'}
-            onClick={toggleLeft}
-          />
-        </Link>
+      <Box as='button' bg={'whiteAlpha.300'} borderRadius={'3xl'}>
+        {/* <Link as={'button'}> */}
+        <ChevronLeftIcon
+          w={10}
+          h={'auto'}
+          color={'gray.50'}
+          onClick={toggleLeft}
+        />
+        {/* </Link> */}
       </Box>
-      <Box bg={'whiteAlpha.300'} borderRadius={'3xl'}>
-        <Link as={'button'}>
-          <ChevronRightIcon
-            w={10}
-            h={'auto'}
-            color={'gray.50'}
-            onClick={toggleRight}
-          />
-        </Link>
+      <Box as='button' bg={'whiteAlpha.300'} borderRadius={'3xl'}>
+        {/* <Link as={'button'}> */}
+        <ChevronRightIcon
+          w={10}
+          h={'auto'}
+          color={'gray.50'}
+          onClick={toggleRight}
+        />
+        {/* </Link> */}
       </Box>
     </Container>
   );

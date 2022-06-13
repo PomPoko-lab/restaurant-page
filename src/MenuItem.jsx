@@ -1,10 +1,10 @@
-import { Box, Text, Heading, Image } from '@chakra-ui/react';
+import { Box, Text, Heading, Image, List, ListItem } from '@chakra-ui/react';
 import fiveStars from './img/5stars.png';
 import fourStars from './img/4stars.png';
 
 const MenuItem = ({ item }) => {
   return (
-    <Box
+    <ListItem
       flex='none'
       borderRadius={'sm'}
       shadow={'dark-lg'}
@@ -52,7 +52,7 @@ const MenuItem = ({ item }) => {
       <Text color={'gray.700'} fontWeight='bold' lineHeight={'5'}>
         {item.description}
       </Text>
-    </Box>
+    </ListItem>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Box, Container, SlideFade, useDisclosure } from '@chakra-ui/react';
+import { Container, List, SlideFade, useDisclosure } from '@chakra-ui/react';
 import MenuItem from './MenuItem';
 import Arrows from './Arrows';
 import { useEffect, useState } from 'react';
@@ -40,14 +40,19 @@ const Menu = () => {
       offsetY={'-20px'}
       transition={{ enter: { duration: 0.75, delay: 0.5 } }}
     >
-      <Container centerContent={true} px={'12'} position={'relative'}>
+      <Container
+        as='section'
+        centerContent={true}
+        px={'12'}
+        position={'relative'}
+      >
         <Arrows toggleRight={toggleRight} toggleLeft={toggleLeft} />
         <Container p='0' paddingTop='5em' height='full' overflow='hidden'>
-          <Box {...carouselStyle}>
+          <List {...carouselStyle}>
             {importedItems.map((item, index) => (
               <MenuItem key={`slide-${index}`} item={item} />
             ))}
-          </Box>
+          </List>
         </Container>
       </Container>
     </SlideFade>

@@ -4,6 +4,7 @@ import {
   FormLabel,
   Input,
   Text,
+  Heading,
   Button,
   SlideFade,
   useDisclosure,
@@ -23,21 +24,21 @@ const ContactUs = () => {
       offsetY={'-20px'}
       transition={{ enter: { duration: 0.75, delay: 0.5 } }}
     >
-      <Container px={'2'}>
-        <Text
+      <Container as='section' px={'2'}>
+        <Heading
           style={{ letterSpacing: '0.2em' }}
           lineHeight={'2'}
           fontSize={'xl'}
           textAlign={'center'}
           color={'gray.100'}
-          fontWeight={'100'}
+          fontWeight={'hairline'}
           textTransform={'uppercase'}
           marginBottom={'3em'}
         >
           Get in Touch
-        </Text>
+        </Heading>
 
-        <FormControl>
+        <FormControl as='form'>
           <Container centerContent={true} marginBottom={'3em'} px={'5em'}>
             <FormLabel
               htmlFor='name'
