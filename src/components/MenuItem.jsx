@@ -1,6 +1,6 @@
-import { Box, Text, Heading, Image, List, ListItem } from '@chakra-ui/react';
-import fiveStars from './img/5stars.png';
-import fourStars from './img/4stars.png';
+import { Box, Text, Heading, Image, ListItem } from '@chakra-ui/react';
+import fiveStars from '../img/5stars.png';
+import fourStars from '../img/4stars.png';
 
 const MenuItem = ({ item }) => {
   return (

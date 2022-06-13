@@ -9,7 +9,7 @@ import {
   Fade,
   ScaleFade,
 } from '@chakra-ui/react';
-import logo from './img/LOGO.png';
+import logo from '../img/LOGO.png';
 
 const Header = ({ setViewState }) => {
   return (

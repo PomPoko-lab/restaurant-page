@@ -3,9 +3,9 @@ import { Flex } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
 import './App.css';
-import Header from './Header';
-import Home from './Home';
-import Footer from './Footer';
+import Header from './components/Header';
+import Home from './components/Home';
+import Footer from './components/Footer';
 
 function App() {
   const [viewState, setViewstate] = useState('');

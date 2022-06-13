@@ -1,24 +1,12 @@
-import {
-  Container,
-  Text,
-  Box,
-  SlideFade,
-  useDisclosure,
-} from '@chakra-ui/react';
-import { useEffect } from 'react';
+import { Container, Text, Box, SlideFade } from '@chakra-ui/react';
 
 const GreetPage = () => {
-  const { isOpen, onToggle } = useDisclosure();
-
-  useEffect(() => {
-    onToggle();
-  }, []);
-
   return (
     <SlideFade
-      in={isOpen}
+      in={true}
       offsetY={'-20px'}
       transition={{ enter: { duration: 0.75, delay: 0.5 } }}
+      unmountOnExit
     >
       <Container as='section' px={'2'}>
         <Box as='h2'>

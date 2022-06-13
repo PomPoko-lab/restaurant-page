@@ -1,18 +1,13 @@
-import { Container, List, SlideFade, useDisclosure } from '@chakra-ui/react';
+import { Container, List, SlideFade } from '@chakra-ui/react';
+import { useState } from 'react';
 import MenuItem from './MenuItem';
 import Arrows from './Arrows';
-import { useEffect, useState } from 'react';
-import data from './items.json';
+import data from '../items.json';
 
 const Menu = () => {
-  const { isOpen, onToggle } = useDisclosure();
   const { items: importedItems } = data;
 
-  const [slide, setSlide] = useState(1);
-
-  useEffect(() => {
-    onToggle();
-  }, []);
+  const [slide, setSlide] = useState(0);
 
   const carouselStyle = {
     transition: 'all 0.5s ease-in-out',
@@ -36,9 +31,10 @@ const Menu = () => {
 
   return (
     <SlideFade
-      in={isOpen}
+      in={true}
       offsetY={'-20px'}
       transition={{ enter: { duration: 0.75, delay: 0.5 } }}
+      unmountOnExit
     >
       <Container
         as='section'
